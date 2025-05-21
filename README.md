@@ -70,98 +70,98 @@ Modell	Fő jellemző	Tesztelési megközelítés V-modell	Fázisokra bontott, sz
 <img src="https://moolya.com/blog/wp-content/uploads/2023/05/Bug-Report.png" alt="image" width="300" height="220">
 
 #### ✅ Milyen lépéseket követnél egy hiba megtalálásakor?
-A hiba észlelése / gyanúja
+- A hiba észlelése / gyanúja
 Valamilyen viselkedés eltér a vártól – ez lehet UI-hiba, funkcionális probléma, összeomlás stb.
 
-Reprodukciós környezet előkészítése
+- Reprodukciós környezet előkészítése
 Ellenőrzöm, milyen környezetben történt a hiba (pl. böngésző, OS, verzió, build). Ugyanabban a környezetben próbálom meg reprodukálni.
 
-Reprodukció lépésről lépésre
+- Reprodukció lépésről lépésre
 Tudatosan végigjárom a hiba felé vezető utat: pontos inputok, kattintások, állapotok. Ha reprodukálható, az már értékes információ.
 
-Logok és technikai információk gyűjtése
+- Logok és technikai információk gyűjtése
 
-Konzol log, hibakód, stack trace, HTTP válaszok stb.
+- Konzol log, hibakód, stack trace, HTTP válaszok stb.
 
-Képernyőmentés vagy videó készítése a hibáról.
+- Képernyőmentés vagy videó készítése a hibáról.
 
-Hiba izolálása
-Megnézem, hogy más környezetben, más verzióval vagy más felhasználói szerepkörrel is jelentkezik-e. Ha nem, az is kulcsfontosságú információ.
+- Hiba izolálása
+- Megnézem, hogy más környezetben, más verzióval vagy más felhasználói - szerepkörrel is jelentkezik-e. Ha nem, az is kulcsfontosságú információ.
 
-Hibajelentés készítése (részletek lentebb)
+- Hibajelentés készítése (részletek lentebb)
 
-Kommunikáció a fejlesztőkkel / csapattal
-Kérdés esetén egyeztetek, pontosítok, visszajelzést adok, ha a hiba státusza változik.
+- Kommunikáció a fejlesztőkkel / csapattal
+- Kérdés esetén egyeztetek, pontosítok, visszajelzést adok, ha a hiba státusza változik.
 
 #### ✅ Beszélj a gyakori tesztjelentésekről és részleteikről!
-A leggyakoribb tesztjelentések:
+- A leggyakoribb tesztjelentések:
 
-Hibajelentés (Bug Report)
-Olyan jelentés, amely dokumentálja, ha a szoftver nem a specifikáció szerint viselkedik.
+ - Hibajelentés (Bug Report)
+    - Olyan jelentés, amely dokumentálja, ha a szoftver nem a specifikáció szerint viselkedik.
 
-Tesztelési státuszjelentés (Test Execution Report)
-Egy adott sprint vagy build során lefuttatott tesztek eredményei:
+- Tesztelési státuszjelentés (Test Execution Report)
+    - Egy adott sprint vagy build során lefuttatott tesztek eredményei:
 
-Hány teszt sikeres / sikertelen / kihagyott
+    - Hány teszt sikeres / sikertelen / kihagyott
 
-Lefedettség, státuszok, tendenciák
+    - Lefedettség, státuszok, tendenciák
 
-Hibatérkép (Bug Summary Report)
-Grafikonos összesítés a hibák állapotáról, súlyosság szerint bontva. Például:
+- Hibatérkép (Bug Summary Report)
+    - Grafikonos összesítés a hibák állapotáról, súlyosság szerint bontva. Például:
 
-10 Critical
+    - 10 Critical
 
-5 Major
+    - 5 Major
 
-12 Minor
-Ezekből következtethetünk a termék érettségére.
+    - 12 Minor
+    - Ezekből következtethetünk a termék érettségére.
 
-Teszteset dokumentáció / test case leírás
+- Teszteset dokumentáció / test case leírás
 Minden egyes teszt részletes leírása:
 
-Cél
+    - Cél
 
-Lépések
+    - Lépések
 
-Bemenet / elvárt kimenet
+    - Bemenet / elvárt kimenet
 
-Teszt státusza
+    - Teszt státusza
 
 
 #### ✅ Mit tartalmaz egy hibajelentés?
 Egy jó hibajelentés egyértelmű, reprodukálható és részletes. Tartalma:
 
-Cím (Title)
-Rövid, de informatív, pl.:
-„[BUG] A ‘Mentés’ gomb nem működik Firefox alatt (v1.2.3)”
+- Cím (Title)
+    - Rövid, de informatív, pl.:
+    - „[BUG] A ‘Mentés’ gomb nem működik Firefox alatt (v1.2.3)”
 
-Környezeti információk
-OS, böngésző, alkalmazásverzió, eszköz típusa stb.
+- Környezeti információk
+    - OS, böngésző, alkalmazásverzió, eszköz típusa stb.
 
-Reprodukálás lépései
+- Reprodukálás lépései
 
-Belépés admin felhasználóként
+    - Belépés admin felhasználóként
 
-Navigálás a Beállítások → Mentés fülre
+    - Navigálás a Beállítások → Mentés fülre
 
-Kattintás a „Mentés” gombra
+    - Kattintás a „Mentés” gombra
 
-Elvárt eredmény
-A változások mentődnek és visszajelzés jelenik meg.
+- Elvárt eredmény
+    - A változások mentődnek és visszajelzés jelenik meg.
 
-Tényleges eredmény
-Gomb nem reagál, a változások elvesznek.
+- Tényleges eredmény
+    - Gomb nem reagál, a változások elvesznek.
 
-Log, hibaüzenet, stack trace (ha van)
-Konzol: Uncaught TypeError: Cannot read property 'save' of undefined
+- Log, hibaüzenet, stack trace (ha van)
+    - Konzol: Uncaught TypeError: Cannot read property 'save' of undefined
 
-Képernyőkép / videó (nagyon hasznos)
+- Képernyőkép / videó (nagyon hasznos)
 
-Súlyosság (Severity)
-Pl.: Blocker, Critical, Major, Minor
+- Súlyosság (Severity)
+    - Pl.: Blocker, Critical, Major, Minor
 
-Prioritás (Priority)
-Business szempontból mennyire fontos.
+- Prioritás (Priority)
+    - Business szempontból mennyire fontos.
 
 #### ✅ Hogyan rangsorolnál egy hibát?
 A hibák rangsorolása két tengely mentén történik:
@@ -169,109 +169,110 @@ A hibák rangsorolása két tengely mentén történik:
 ➤ Severity (Súlyosság) – technikai hatás
 Blocker – Nem lehet belépni, rendszer összeomlik
 
-Critical – Fő funkció nem működik (pl. nem lehet vásárolni)
+- Critical – Fő funkció nem működik (pl. nem lehet vásárolni)
 
-Major – Komoly funkciós hiba, de van kerülőút
+- Major – Komoly funkciós hiba, de van kerülőút
 
-Minor – UI hiba, helyesírás, kis kényelmetlenség
+- Minor – UI hiba, helyesírás, kis kényelmetlenség
 
-Trivial – Alig észrevehető, esztétikai jellegű
+- Trivial – Alig észrevehető, esztétikai jellegű
 
 ➤ Priority (Prioritás) – üzleti hatás
-P1 – Azonnali javítás szükséges
+- P1 – Azonnali javítás szükséges
 
-P2 – Következő sprintben javítandó
+- P2 – Következő sprintben javítandó
 
-P3 – Alacsony prioritás, ráér
+- P3 – Alacsony prioritás, ráér
 
-P4 – Nem sürgős, backlogba mehet
+- P4 – Nem sürgős, backlogba mehet
 
-Egy hiba lehet Critical-Magyarul P3, ha például csak nagyon ritka esetben jön elő, de technikailag súlyos.
+- Egy hiba lehet Critical-Magyarul P3, ha például csak nagyon ritka esetben jön elő, de technikailag súlyos.
 
 
 ## Test Automation, Selenium
 <img src="https://media.licdn.com/dms/image/C4D12AQE3GOyVsZazOw/article-cover_image-shrink_600_2000/0/1583830696602?e=2147483647&v=beta&t=bYHbKyhMoWsMgtEug6eSf3m0db5ZtGEl437TeS1qkfI" alt="image" width="320" height="220">
 
 #### ✅ Melyik teszteseteket érdemes automatizálni és melyiket nem?
-Érdemes automatizálni:
+- Érdemes automatizálni:
 
-Gyakran ismétlődő tesztek (pl. regressziós tesztek)
+    - Gyakran ismétlődő tesztek (pl. regressziós tesztek)
 
-Stabil, kevéssé változó funkciók (pl. bejelentkezés, űrlap beküldés)
+    - Stabil, kevéssé változó funkciók (pl. bejelentkezés, űrlap beküldés)
 
-Több böngészőben / környezetben is tesztelendő funkciók
+    - Több böngészőben / környezetben is tesztelendő funkciók
 
-Adatvezérelt tesztek – sokféle bemenettel ugyanaz a teszt
+    - Adatvezérelt tesztek – sokféle bemenettel ugyanaz a teszt
 
-Teljesítménytesztek (load, stressz)
+    - Teljesítménytesztek (load, stressz)
 
-Füsttesztek (smoke tests) – alaprendszer működik-e
+    - Füsttesztek (smoke tests) – alaprendszer működik-e
 
-Nem érdemes automatizálni:
+- Nem érdemes automatizálni:
 
-Gyakran változó felületek / dizájn elemek
+    - Gyakran változó felületek / dizájn elemek
 
-Komplex vizuális ellenőrzések (pl. UI kinézete)
+    - Komplex vizuális ellenőrzések (pl. UI kinézete)
 
-Egyszeri tesztesetek vagy gyors manuális ellenőrzések
+    - Egyszeri tesztesetek vagy gyors manuális ellenőrzések
 
-Feltáró tesztelés (exploratory testing)
+    - Feltáró tesztelés (exploratory testing)
 #### ✅ Írj le egy jó automatizált tesztet!
-Egyértelmű, célorientált
+- Egyértelmű, célorientált
 
-Használható többféle inputtal (adatvezérelt módon)
+- Használható többféle inputtal (adatvezérelt módon)
 
-Stabilan teszteli a fő funkciót
+- Stabilan teszteli a fő funkciót
 
-Hibajelzés esetén pontosan mutatja, hol a probléma
+- Hibajelzés esetén pontosan mutatja, hol a probléma
 
 
 
 #### ✅ Mi a Selenium, Selenium IDE és Selenium WebDriver?
 
-Selenium: Nyílt forráskódú tesztelési keretrendszer webalkalmazásokhoz.
+- Selenium: Nyílt forráskódú tesztelési keretrendszer webalkalmazásokhoz.
 
-Selenium IDE:
+- Selenium IDE:
 
-Böngésző bővítmény (Chrome/Firefox)
+    - Böngésző bővítmény (Chrome/Firefox)
 
-Legegyszerűbb mód tesztek felvételére (record & playback)
+    - Legegyszerűbb mód tesztek felvételére (record & playback)
 
-Nem túl rugalmas, inkább tanulásra és gyors demókra jó
+    - Nem túl rugalmas, inkább tanulásra és gyors demókra jó
 
-Selenium WebDriver:
+- Selenium WebDriver:
 
-Programozható interfész Python, Java, C#, JS stb. nyelveken
+    - Programozható interfész Python, Java, C#, JS stb. nyelveken
 
-Közvetlenül vezérli a böngészőt
+    - Közvetlenül vezérli a böngészőt
 
-Rugalmas, ipari szintű automatizálásra való
+    - Rugalmas, ipari szintű automatizálásra való
+
 #### ✅ Hogyan lehet azonosítani a webes elemeket?
 Webes elemek azonosítása a DOM alapján:
 
-By.id("...")
+- By.id("...")
 
-By.name("...")
+- By.name("...")
 
-By.class_name("...")
+- By.class_name("...")
 
-By.tag_name("...")
+- By.tag_name("...")
 
-By.link_text("...")
+- By.link_text("...")
 
-By.partial_link_text("...")
+- By.partial_link_text("...")
 
-By.css_selector("...") – erőteljes, rugalmas
+- By.css_selector("...") – erőteljes, rugalmas
 
-By.xpath("...") – nagyon pontos, akár a DOM-szerkezet szerint
+- By.xpath("...") – nagyon pontos, akár a DOM-szerkezet szerint
 
 #### ✅ Hogyan lehet várni az elemekre, és mi lehet a probléma? Gyűjtsd össze a lehetséges hibákat és okokat!
-Implicit wait:
+- Implicit wait:
 Egyszer beállítva minden elemre vár a megadott ideig
 Pl.: driver.implicitly_wait(10)
-Explicit wait:
+- Explicit wait:
 Adott elemre várunk adott feltétellel
-Fluent wait?
+- Fluent wait:
 Több beállítás (pl. polling idő, kivételek figyelmen kívül hagyása)
 Gyakori problémák és okok:
 Az elem még nem látható / nem kattintható
